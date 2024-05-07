@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Row, Image } from "react-bootstrap";
 
-export default function CurrentWeather({temperature}) {
+export default function CurrentWeather({temperature, condition}) {
   return (
     <Card className="bg-warning-subtle">
       <Row className="align-items-center ms-5">
@@ -11,7 +11,7 @@ export default function CurrentWeather({temperature}) {
         </div>
 
         <div className="col-md-2">
-          <Image style={{width: "100%"}} src="https://cdn.weatherapi.com/weather/64x64/day/113.png" />
+          <Image style={{width: "100%"}} src={condition} />
         </div>
       </Row>
     </Card>

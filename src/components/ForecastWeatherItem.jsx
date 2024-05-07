@@ -1,12 +1,12 @@
 import React from "react";
 import {Col, Image} from 'react-bootstrap'
 
-export default function ForecastWeatherItem() {
+export default function ForecastWeatherItem({temperature, condition, time}) {
   return (
     <Col md={1} className="d-flex flex-column justify-content-center">
-      <h3 className="text-center">23&deg;</h3>
-      <Image src="https://cdn.weatherapi.com/weather/64x64/day/113.png" />
-      <p className="text-center">12:00 PM</p>
+      <h3 className="text-center">{temperature}&deg;</h3>
+      <Image src={condition} />
+      <p className="text-center">{time}</p>
     </Col>
   );
 }
